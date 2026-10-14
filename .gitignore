@@ -6,4 +6,5 @@ __pycache__/
 amazon-history-categorized/
 Your Orders/
 dashboard/
+amazon-order-dashboard*.html
 *.log
