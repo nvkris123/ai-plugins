@@ -10,6 +10,12 @@
       "description": "Analyze Amazon order exports with deterministic scripts and AI category review.",
       "category": "Productivity",
       "source": "./plugins/amazon-spending-analyzer"
+    },
+    {
+      "name": "second-brain",
+      "description": "Skills and subagent for maintaining a second-brain wiki — /ingest, /query, /lint, /move.",
+      "category": "Productivity",
+      "source": "./plugins/second-brain"
     }
   ]
 }

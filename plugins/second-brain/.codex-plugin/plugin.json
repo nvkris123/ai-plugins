@@ -1,0 +1,18 @@
+{
+  "name": "second-brain",
+  "version": "1.0.0",
+  "description": "Maintain a second-brain wiki with Codex — ingest sources, query the wiki, lint it.",
+  "author": {
+    "name": "Vinay"
+  },
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Second Brain",
+    "shortDescription": "Ingest sources into an interlinked wiki, query it with citations, and lint it.",
+    "longDescription": "Second Brain turns an agent into a disciplined wiki maintainer. Sources under raw/ stay immutable; the wiki compounds. /ingest reads a source, discusses takeaways, writes a source page and ripples updates across affected pages. /query answers from the wiki in layers with citations. /lint checks link integrity, structure, graph health, content drift, readability, and gaps.",
+    "developerName": "Vinay",
+    "category": "Productivity",
+    "capabilities": ["Local file processing", "Knowledge management", "Document analysis"],
+    "defaultPrompt": "Ingest the newest source under raw/ and ripple the updates across the wiki."
+  }
+}

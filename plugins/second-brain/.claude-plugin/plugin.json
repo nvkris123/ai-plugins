@@ -1,0 +1,11 @@
+{
+  "name": "second-brain",
+  "displayName": "Second Brain",
+  "version": "1.0.0",
+  "description": "Maintain a second-brain wiki as a disciplined wiki maintainer rather than a chatbot. Ingest immutable sources into an interlinked markdown wiki, answer queries against it with citations, and lint it for link integrity, structure, graph health, content drift, readability, and gaps.",
+  "author": {
+    "name": "Vinay"
+  },
+  "license": "PolyForm-Noncommercial-1.0.0",
+  "keywords": ["second-brain", "wiki", "knowledge-base", "notes", "ingest", "lint"]
+}

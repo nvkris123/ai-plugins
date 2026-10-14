@@ -120,6 +120,25 @@ Default generated output:
 amazon-history-categorized/
 ```
 
+### Second Brain
+
+Turn Claude Code or Codex into a disciplined maintainer of a personal markdown wiki.
+
+You drop sources (articles, transcripts, PDFs, notes) into a brain's `raw/` folder,
+and the plugin compiles them into an interlinked wiki that keeps getting richer,
+instead of re-reading everything on every question. It ships four skills —
+`/ingest`, `/query`, `/lint`, `/move` — plus a read-only `wiki-researcher` subagent.
+
+Install it **per brain**, at project scope, so its skills never load in unrelated repos:
+
+```bash
+claude plugin marketplace add nvkris123/ai-plugins --scope project
+claude plugin install second-brain@ai-plugins --scope project
+```
+
+Then follow [plugins/second-brain/README.md](plugins/second-brain/README.md) to
+generate the brain's `CLAUDE.md` and start ingesting.
+
 ## Privacy
 
 Plugins in this repository are designed to run local scripts where possible. Amazon Spending Analyzer keeps your Amazon export local. Its deterministic ingestion, analysis, and dashboard scripts do not call an LLM, Codex CLI, or an API.
@@ -143,6 +162,12 @@ plugins/
     .claude-plugin/plugin.json       # Claude Code manifest
     skills/                          # shared by both hosts
     scripts/                         # shared by both hosts
+  second-brain/
+    .codex-plugin/plugin.json
+    .claude-plugin/plugin.json
+    skills/                          # ingest, query, lint, move (+ move-page.py)
+    agents/                          # wiki-researcher subagent
+    commands/                        # /second-brain:<name> slash commands
 ```
 
 ## Troubleshooting
