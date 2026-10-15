@@ -45,7 +45,7 @@ and git is what makes that recoverable.
 From inside the new brain, point it at the marketplace:
 
 ```bash
-claude plugin marketplace add nvkris123/ai-plugins --scope project
+claude plugin marketplace add https://github.com/nvkris123/ai-plugins.git --scope project
 ```
 
 Then enable it:

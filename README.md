@@ -132,7 +132,7 @@ instead of re-reading everything on every question. It ships four skills —
 Install it **per brain**, at project scope, so its skills never load in unrelated repos:
 
 ```bash
-claude plugin marketplace add nvkris123/ai-plugins --scope project
+claude plugin marketplace add https://github.com/nvkris123/ai-plugins.git --scope project
 claude plugin install second-brain@ai-plugins --scope project
 ```
 

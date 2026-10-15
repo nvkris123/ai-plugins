@@ -449,16 +449,17 @@ file. Below, `<marketplace-path>` means that folder's absolute path.
    {
      "extraKnownMarketplaces": {
        "ai-plugins": {
-         "source": { "source": "github", "repo": "nvkris123/ai-plugins" }
+         "source": { "source": "git", "url": "https://github.com/nvkris123/ai-plugins.git" }
        }
      },
      "enabledPlugins": { "second-brain@ai-plugins": true }
    }
    ```
 
-   The `ai-plugins` source may instead be `{"source": "directory", "path":
-   "<marketplace-path>"}` when I edit the plugin from a local clone — either is
-   correct. An old `second-brain@second-brain` entry, or a `second-brain`
+   The `ai-plugins` source may instead be `{"source": "github", "repo":
+   "nvkris123/ai-plugins"}`, or `{"source": "directory", "path":
+   "<marketplace-path>"}` when I edit the plugin from a local clone — all three are
+   correct, as long as it matches how `ai-plugins` is registered on this machine. An old `second-brain@second-brain` entry, or a `second-brain`
    marketplace pointing at `open-code/second-brain`, is stale: report it.
 
    `enabledPlugins` alone works on this machine but leans on user-level
@@ -467,7 +468,7 @@ file. Below, `<marketplace-path>` means that folder's absolute path.
    to run these two from this folder, which write both keys correctly:
 
    ```bash
-   claude plugin marketplace add nvkris123/ai-plugins --scope project
+   claude plugin marketplace add https://github.com/nvkris123/ai-plugins.git --scope project
    claude plugin install second-brain@ai-plugins --scope project
    ```
 
